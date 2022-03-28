@@ -1,0 +1,22 @@
+.card {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 86px;
+  background-color: var(--bg-cards);
+  border-radius: 8px;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.card h2 {
+  font-size: 20px;
+
+}
+
+
+.card span{
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.container {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 395px 1fr;
+  height: 100%;
+}
+
+.leftsidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rightsidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+}
+
+.projetos {
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
+  gap: 20px;
+  align-items: flex-start;
+  
+}
