@@ -16,18 +16,22 @@ const icones = [
   {
     icon: briefcase,
     info: "Léo Andrade Tecnologia",
+    link: "https://www.linkedin.com/in/leandrotandrade/",
   },
   {
     icon: github,
     info: "dshzr",
+    link: "https://github.com/dshzr",
   },
   {
     icon: linkedin,
     info: "wellington-santiago",
+    link: "https://www.linkedin.com/in/wellington-santiago-161201201/",
   },
   {
     icon: globe,
-    info: "well-portifolio.netlify.app",
+    info: "portifolio-wellingtonsantiago.netlify.app",
+    link: "https://portifolio-wellingtonsantiago.netlify.app/",
   },
   {
     icon: mail,
@@ -38,12 +42,13 @@ const icones = [
 const CardLinks = () => {
   return (
     <div className={styles.card}>
-    
       {icones.map((icone, index) => {
         return (
           <span className={styles.row} key={index}>
             <img src={icone.icon} alt="" />
-            <p>{icone.info}</p>
+            <a href={icone.link} target="_blank" style={{ color: "#837e9f" }}>
+              <p>{icone.info}</p>
+            </a>
           </span>
         );
       })}
