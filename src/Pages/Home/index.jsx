@@ -47,27 +47,30 @@ const Home = () => {
       <div className={styles.rightsidebar}>
         <CardExtended
           titulo="My Projects"
-          info="Show All"
+          info={!showAll ? "Show All" : "Hide"}
           setShowAll={setShowAll}
           showAll={showAll}
         />
         <div className={styles.projetos}>
           {repos && !showAll
-            ? repos.slice(0, 2).map((repositorio) => {
-                return (
-                  <CardProjects
-                    repositorio={repositorio}
-                    nome={repositorio.name}
-                    stars={repositorio.stargazers_count}
-                    forks={repositorio.forks}
-                    description={
-                      repositorio.description
-                        ? repositorio.description
-                        : "Este repositório não contém nenhuma descrição."
-                    }
-                  />
-                );
-              })
+            ? repos
+                .slice(0, 4)
+                .sort()
+                .map((repositorio) => {
+                  return (
+                    <CardProjects
+                      repositorio={repositorio}
+                      nome={repositorio.name}
+                      stars={repositorio.stargazers_count}
+                      forks={repositorio.forks}
+                      description={
+                        repositorio.description
+                          ? repositorio.description
+                          : "Este repositório não contém nenhuma descrição."
+                      }
+                    />
+                  );
+                })
             : repos &&
               showAll &&
               repos.map((repositorio) => {
