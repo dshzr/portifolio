@@ -8,12 +8,25 @@ import CardTechs from "../../Components/CardTechs";
 import CardExtended from "../../Components/CardExtended";
 import CardProjects from "../../Components/CardProjects";
 import CardRecentsPosts from "../../Components/CardRecentsPosts";
+import ButtonUpPage from "../../Components/ButtonUpPage";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 const Home = () => {
   const [user, setUser] = useState(null);
   const [repos, setRepos] = useState(null);
   const [showAll, setShowAll] = useState(false);
+  const [showButtonUp, setShowButtonUp] = useState(false);
+  useEffect(() => {
+    async function observar() {
+      const p = document.querySelector(".recents");
+      const observer = new IntersectionObserver((entries) =>
+        setShowButtonUp(entries[0].isIntersecting)
+      );
+      observer.observe(p);
+    }
+    observar();
+  }, []);
+
   useEffect(() => {
     const getGithubUser = async () => {
       try {
@@ -92,6 +105,7 @@ const Home = () => {
         <CardExtended titulo="Recent Posts" />
         <CardRecentsPosts />
       </div>
+      {showButtonUp && <ButtonUpPage />}
     </div>
   );
 };

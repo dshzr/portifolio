@@ -16,7 +16,7 @@
     display: flex !important;
     flex-wrap: wrap;
   }
-  
+
   .rightsidebar {
     min-width: 280px;
     margin-top: 60px;
@@ -45,4 +45,8 @@
   grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
   gap: 20px;
   align-items: flex-start;
+}
+
+* {
+  scroll-behavior: smooth;
 }
