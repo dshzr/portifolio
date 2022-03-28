@@ -3,8 +3,6 @@
   display: grid;
   grid-template-columns: 395px 1fr;
   height: 100%;
-  width: 100%;
-  
 }
 
 @media (max-width: 800px) {
@@ -18,8 +16,9 @@
     display: flex !important;
     flex-wrap: wrap;
   }
-
+  
   .rightsidebar {
+    min-width: 280px;
     margin-top: 60px;
   }
 
@@ -39,7 +38,6 @@
   flex-direction: column;
   gap: 30px;
   max-width: 100%;
- 
 }
 
 .projetos {
