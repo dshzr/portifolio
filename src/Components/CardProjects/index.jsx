@@ -2,10 +2,14 @@ import React from "react";
 import styles from "./CardProjects.module.css";
 import star from "../../Assets/Icons/star.svg";
 import branch from "../../Assets/Icons/git-branch.svg";
-const CardProjects = ({ forks, stars, nome, description }) => {
+const CardProjects = ({ forks, stars, nome, description, repositorio }) => {
+  const openLink = (repo) => {
+    window.open(repo.html_url, "_blank");
+  };
+
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
+      <div className={styles.card} onClick={() => openLink(repositorio)}>
         <div className={styles.headercard}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

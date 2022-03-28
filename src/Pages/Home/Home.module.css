@@ -3,6 +3,29 @@
   display: grid;
   grid-template-columns: 395px 1fr;
   height: 100%;
+  
+  
+}
+
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100% !important;
+  }
+
+  .projetos {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  .rightsidebar {
+    margin-top: 60px;
+  }
+
+  .leftsidebar {
+    align-items: center;
+  }
 }
 
 .leftsidebar {
@@ -12,11 +35,11 @@
 }
 
 .rightsidebar {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  
+  max-width: 100%;
+ 
 }
 
 .projetos {
@@ -24,5 +47,4 @@
   grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
   gap: 20px;
   align-items: flex-start;
-  
 }

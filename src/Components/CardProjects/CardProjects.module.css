@@ -3,13 +3,14 @@
 }
 
 .card {
-
   background-color: var(--bg-cards);
   padding: 30px;
   border-radius: 8px;
   background: #302f3d;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
 }
 
 .headercard {
@@ -30,8 +31,8 @@
   font-weight: lighter;
   line-height: 20px;
 
-
-  max-width:100ch;
+  cursor: pointer;
+  max-width: 100ch;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -70,4 +71,12 @@
   border-radius: 50%;
   margin: 0 4px;
   border: 2px solid #837e9f;
+}
+
+.card:hover {
+  background-color: var(--bg-cards);
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

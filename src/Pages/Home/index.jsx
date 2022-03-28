@@ -47,7 +47,7 @@ const Home = () => {
       <div className={styles.rightsidebar}>
         <CardExtended
           titulo="My Projects"
-          info="Veja todos"
+          info="Show All"
           setShowAll={setShowAll}
           showAll={showAll}
         />
@@ -56,6 +56,7 @@ const Home = () => {
             ? repos.slice(0, 2).map((repositorio) => {
                 return (
                   <CardProjects
+                    repositorio={repositorio}
                     nome={repositorio.name}
                     stars={repositorio.stargazers_count}
                     forks={repositorio.forks}
@@ -72,6 +73,7 @@ const Home = () => {
               repos.map((repositorio) => {
                 return (
                   <CardProjects
+                    repositorio={repositorio}
                     nome={repositorio.name}
                     stars={repositorio.stargazers_count}
                     forks={repositorio.forks}
